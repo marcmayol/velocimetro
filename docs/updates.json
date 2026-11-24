@@ -1,0 +1,8 @@
+{
+  "versionCode": 1,
+  "versionName": "0.1.0",
+  "url": "https://github.com/marcmayol/velocimetro/releases/download/v0.1.0/velocimetro-v0.1.0.apk",
+  "sha256": "8e27a2cd7e094eaf990a85bfe3051baaf4d81bf6d11cdc4751e33600df046306",
+  "notas": "Primera versión: velocidad con el GPS del móvil, sin internet. Esfera analógica o digital, en km/h, mph, m/s o nudos, con máxima, media, distancia y tiempo en marcha.",
+  "check_horas": 24
+}
