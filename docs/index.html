@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Velocímetro</title>
+<meta name="description" content="Velocímetro GPS para Android: tu velocidad con el GPS del móvil, sin internet.">
+<style>
+  :root { color-scheme: light dark; --naranja: #e65100; }
+  body { font: 17px/1.5 system-ui, sans-serif; max-width: 34rem; margin: 0 auto; padding: 2.5rem 1.2rem; }
+  h1 { margin: 0 0 .3rem; font-size: 2.2rem; display: flex; align-items: center; gap: .5rem; }
+  h1 img { width: 2.4rem; height: 2.4rem; border-radius: .6rem; }
+  a.boton { display: inline-block; background: var(--naranja); color: #fff; padding: .8rem 1.3rem; border-radius: .6rem; text-decoration: none; font-weight: 600; margin: 1rem 0; }
+  li { margin: .3rem 0; }
+  small { opacity: .7; }
+</style>
+</head>
+<body>
+<h1><img src="icono_512.png" alt="">Velocímetro</h1>
+<p>Pulsas Empezar y te dice a qué velocidad vas, con el GPS del móvil.</p>
+<a class="boton" id="descarga" href="https://github.com/marcmayol/velocimetro/releases/latest">Descargar para Android</a>
+<ul>
+  <li>En km/h, mph, m/s o nudos.</li>
+  <li>Esfera analógica o número grande en digital.</li>
+  <li>Velocidad máxima, media, distancia y tiempo en marcha.</li>
+  <li>La pantalla no se apaga mientras la miras.</li>
+</ul>
+<p><small>Funciona sin internet: lee los satélites directamente. Sin cuentas, sin anuncios y sin que tu ubicación salga del móvil.</small></p>
+<script>
+fetch("updates.json").then(r => r.json()).then(m => {
+  const a = document.getElementById("descarga");
+  a.href = m.url;
+  a.textContent = "Descargar para Android · v" + m.versionName;
+}).catch(() => {});
+</script>
+</body>
+</html>

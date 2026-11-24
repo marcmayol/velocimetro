@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="start">Empezar</string>
+    <string name="stop">Parar</string>
+    <string name="analog">Analógica</string>
+    <string name="digital">Digital</string>
+    <string name="max">MÁX %1$s %2$s</string>
+    <string name="distance">Distancia</string>
+    <string name="average">Media</string>
+    <string name="moving">En marcha</string>
+    <string name="reset">Reiniciar trayecto</string>
+    <string name="reset_confirm">Toca otra vez para reiniciar</string>
+    <string name="accuracy">GPS ±%1$s m</string>
+    <string name="searching">Buscando señal GPS…</string>
+    <string name="paused">Pulsa Empezar para medir tu velocidad</string>
+    <string name="local_note">Funciona sin internet: tu ubicación no sale del móvil.</string>
+    <string name="need_permission">Hace falta el permiso de ubicación para leer el GPS.</string>
+    <string name="grant">Dar permiso</string>
+    <string name="denied">El permiso de ubicación está desactivado. Actívalo en Ajustes.</string>
+    <string name="open_settings">Abrir Ajustes</string>
+    <string name="approximate">Solo tiene permiso de ubicación aproximada. Para la velocidad hace falta la precisa.</string>
+    <string name="gps_off">La ubicación del móvil está apagada.</string>
+    <string name="turn_on">Activar</string>
+</resources>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Velocímetro</string>
+
+    <string name="update_available">Velocímetro %1$s disponible</string>
+    <string name="update_now">Actualizar</string>
+    <string name="update_downloading">Descargando la actualización… %1$d %%</string>
+    <string name="update_checking">Buscando actualizaciones…</string>
+    <string name="update_up_to_date">Tienes la última versión.</string>
+    <string name="update_verifying">Comprobando el archivo descargado…</string>
+    <string name="update_permission">Deja que Velocímetro instale aplicaciones y vuelve aquí.</string>
+    <string name="update_installing">Instalando: Velocímetro se reiniciará.</string>
+    <string name="update_err_offline">Sin conexión.</string>
+    <string name="update_err_server">No se pudo leer la información de versiones.</string>
+    <string name="update_err_download">No se pudo descargar la actualización.</string>
+    <string name="update_err_hash">El archivo descargado no era válido y se ha borrado.</string>
+    <string name="update_err_install">No se pudo instalar.</string>
+</resources>

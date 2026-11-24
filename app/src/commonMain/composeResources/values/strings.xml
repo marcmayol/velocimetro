@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="start">Start</string>
+    <string name="stop">Stop</string>
+    <string name="analog">Analog</string>
+    <string name="digital">Digital</string>
+    <string name="max">MAX %1$s %2$s</string>
+    <string name="distance">Distance</string>
+    <string name="average">Average</string>
+    <string name="moving">Moving time</string>
+    <string name="reset">Reset trip</string>
+    <string name="reset_confirm">Tap again to reset</string>
+    <string name="accuracy">GPS ±%1$s m</string>
+    <string name="searching">Searching for GPS signal…</string>
+    <string name="paused">Press Start to measure your speed</string>
+    <string name="local_note">Works offline: your location never leaves the phone.</string>
+    <string name="need_permission">Location permission is needed to read the GPS.</string>
+    <string name="grant">Allow location</string>
+    <string name="denied">Location permission is off. Turn it on in Settings.</string>
+    <string name="open_settings">Open Settings</string>
+    <string name="approximate">Only approximate location is allowed. Speed needs precise location.</string>
+    <string name="gps_off">Location is turned off on the phone.</string>
+    <string name="turn_on">Turn on</string>
+</resources>

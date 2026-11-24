@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Speedometer</string>
+
+    <string name="update_available">Speedometer %1$s available</string>
+    <string name="update_now">Update</string>
+    <string name="update_downloading">Downloading the update… %1$d %%</string>
+    <string name="update_checking">Checking for updates…</string>
+    <string name="update_up_to_date">You have the latest version.</string>
+    <string name="update_verifying">Checking the downloaded file…</string>
+    <string name="update_permission">Allow Speedometer to install apps and come back here.</string>
+    <string name="update_installing">Installing: Speedometer will restart.</string>
+    <string name="update_err_offline">No connection.</string>
+    <string name="update_err_server">Could not read the version information.</string>
+    <string name="update_err_download">Could not download the update.</string>
+    <string name="update_err_hash">The downloaded file was not valid and has been deleted.</string>
+    <string name="update_err_install">Could not install it.</string>
+</resources>

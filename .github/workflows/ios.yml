@@ -1,0 +1,46 @@
+# Desde Windows no se puede compilar para iOS: este workflow lo hace en un Mac de GitHub
+# en cada push. Compila el código Kotlin para iOS, pasa los tests comunes en el simulador
+# y construye la app de Xcode (sin firmar).
+name: iOS
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  ios:
+    runs-on: macos-15
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: 17
+      - uses: gradle/actions/setup-gradle@v4
+
+      - name: Tests comunes en el simulador de iPhone
+        run: ./gradlew :app:iosSimulatorArm64Test --stacktrace
+
+      - name: Generar el proyecto de Xcode
+        run: |
+          brew install xcodegen
+          cd iosApp && xcodegen
+
+      - name: Construir, abrir en un iPhone simulado y capturar
+        run: |
+          cd iosApp
+          DISPOSITIVO=$(xcrun simctl list devices available | grep -m1 -oE 'iPhone 1[0-9] \(([0-9A-F-]+)\)' | grep -oE '[0-9A-F-]{36}')
+          echo "Simulador: $DISPOSITIVO"
+          xcrun simctl boot "$DISPOSITIVO"
+          xcodebuild -project Velocimetro.xcodeproj -scheme Velocimetro -configuration Debug             -destination "id=$DISPOSITIVO" -derivedDataPath build             CODE_SIGNING_ALLOWED=NO build
+          xcrun simctl install "$DISPOSITIVO" build/Build/Products/Debug-iphonesimulator/Velocimetro.app
+          xcrun simctl launch "$DISPOSITIVO" com.marcmayol.velocimetro
+          sleep 25
+          xcrun simctl io "$DISPOSITIVO" screenshot ../captura-ios.png
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: captura-ios
+          path: captura-ios.png
