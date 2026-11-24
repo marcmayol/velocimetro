@@ -8,7 +8,7 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
 import kotlinx.cinterop.useContents
-import platform.CoreLocation.CLAccuracyAuthorizationReducedAccuracy
+import platform.CoreLocation.CLAccuracyAuthorization
 import platform.CoreLocation.CLLocation
 import platform.CoreLocation.CLLocationManager
 import platform.CoreLocation.CLLocationManagerDelegateProtocol
@@ -68,7 +68,7 @@ class GpsIos : FuenteGps {
         acceso = when (gestor.authorizationStatus) {
             kCLAuthorizationStatusNotDetermined -> Acceso.PEDIR
             kCLAuthorizationStatusAuthorizedWhenInUse, kCLAuthorizationStatusAuthorizedAlways ->
-                if (gestor.accuracyAuthorization == CLAccuracyAuthorizationReducedAccuracy) Acceso.SOLO_APROXIMADA
+                if (gestor.accuracyAuthorization == CLAccuracyAuthorization.CLAccuracyAuthorizationReducedAccuracy) Acceso.SOLO_APROXIMADA
                 else Acceso.LISTO
             else -> Acceso.DENEGADO
         }
